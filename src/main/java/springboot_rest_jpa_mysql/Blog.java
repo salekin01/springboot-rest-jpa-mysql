@@ -2,7 +2,7 @@ package springboot_rest_jpa_mysql;
 
 import javax.persistence.*;
 
-@Table(name = "blog")     //This is required if your table name is different from the class name
+@Table(name = "blog", schema = "springboot-rest-jpa")     //This is required if your table name is different from the class name
 @Entity     //added for db
 public class Blog {
 
