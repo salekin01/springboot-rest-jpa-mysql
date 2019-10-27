@@ -61,7 +61,7 @@ public class BlogController {
     @Autowired
     BlogRespository blogRespository;
 
-    @GetMapping("/blog")         //or, @RequestMapping(value = "/blog", method = RequestMethod.GET)
+    @GetMapping(path="/blog", produces = { "application/json", "application/xml" })         //or, @RequestMapping(value = "/blog", method = RequestMethod.GET)
     public List<Blog> index(){
         return blogRespository.findAll();
     }
